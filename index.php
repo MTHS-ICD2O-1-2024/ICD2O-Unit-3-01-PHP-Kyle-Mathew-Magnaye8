@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
   <meta charset="utf-8" />
@@ -11,14 +11,13 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
   <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css" />
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-  <link rel="manifest" href="site.webmanifest" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png" />
   <title>Area of a Trapezoid, in PHP</title>
 </head>
 
 <body>
-  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
       <div class="mdl-layout__header-row">
@@ -26,40 +25,31 @@
       </div>
     </header>
     <main class="mdl-layout__content">
-      <div class="right-image">
-        <img src="./images/Screenshot 2025-03-30 4.26.13 PM.png" alt="Trapezoid image" />
-      </div>
+      <br>
       <div class="page-content">Formula:</div>
+      <br>
+      <p>
+        A = [(a + b) / 2] * h
+      </p>
+      <div class="page-content">
+        <img src="./images/Screenshot 2025-03-30 4.26.13 PM.png" alt="Trapezoid diagram" width="300">
+      </div>
+
+      <div class="page-content">Please enter integers for dimensions:</div>
       <br />
-      <form action="answer.php" method="GE"> <!-- Set the form action to answer.php -->
-        <p>A = [(a + b) / 2] * h</p>
-        <div class="page-content">
-          Please enter integers for dimensions:
-        </div>
-        <div class="mdl-textfield mdl-js-textfield">
-          <p>a base:</p>
-          <input class="mdl-textbox__input" type="text" name="a_base" pattern="-?[0-9]*(\.[0-9]+)?" name="base-a-of-trapizoid" required />
-          <span> mm </span>
-        </div>
+      <form action="answer.php" method="post">
+        <p>a base:</p>
+        <input type="text" name="a_base" required /> mm
         <p>b base:</p>
-        <div class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textbox__input" type="text" name="b_base" pattern="-?[0-9]*(\.[0-9]+)?" name="base-b-of-trapizoid" required />
-          <span> mm </span>
-        </div>
+        <input type="text" name="b_base" required /> mm
         <p>height:</p>
-        <div class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textbox__input" type="text" name="height" pattern="-?[0-9]*(\.[0-9]+)?" name="height-of-a-trapezoid" required />
-          <span> mm </span>
-        </div>
-        <br />
+        <input type="text" name="height" required /> mm
+        <br /><br />
         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">
           Calculate Area
         </button>
       </form>
-      <br />
-      <div class="page-content-answer">
-        <div id="user-info"></div>
-      </div>
+
     </main>
   </div>
 </body>
